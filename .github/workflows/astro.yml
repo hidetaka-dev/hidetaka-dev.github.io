@@ -70,6 +70,11 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Copy vercel.json
+        run: |
+          pwd
+          ls -la
+          cp ${{ env.BUILD_PATH }}/vercel.json ${{ env.BUILD_PATH }}/dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
