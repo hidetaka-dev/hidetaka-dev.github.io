@@ -1,0 +1,9 @@
+{
+    "rewrites": [{
+        "source": "/sub",
+        "destination": "https://hidetaka-dev.github.io/sub/"
+    }, {
+        "source": "/sub/(.*)",
+        "destination": "https://hidetaka-dev.github.io/sub/$1"
+    }]
+}
